@@ -28,8 +28,9 @@ function App() {
     //   <button onClick={() => setShowExam(!showExam)}>클릭</button>
 
     //   {/* showExam이 true면 화면에 Exam1 컴포넌트 호출하여 랜더링함 */}
-    //   {showExam && <Exam2 yoonjin="JIN" test="world" />}
+    //   {showExam && <Exam2 yoonjin="hello" test="world" />}
     // </>
+
     // <Exam3 />
     // <Exam4 />
     <Exam5 />

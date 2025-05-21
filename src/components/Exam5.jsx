@@ -6,8 +6,8 @@ import test1 from "../assets/test1.jpg";
 const Exam5 = () => {
   // return <Exam5_1 />;
   // return <Exam5_2 />;
-  // return <Exam5_3 isLogin={true} />;
-  // return <Exam5_4 isLogin={true} />;
+  // return <Exam5_3 isLogin={false} />;
+  //return <Exam5_4 isLogin={true} />;
   return <Exam5_5 />;
 };
 
@@ -28,7 +28,7 @@ const Exam5_2 = () => {
   return <img src={test1} />;
 };
 
-//JSX 예제 3 : 로그인 여부에 따라 화면 다르게 보이기
+//JSX 예제 3 : 로그인 여부에 따라 화면 다르게 보이기(if else문)
 const Exam5_3 = (props) => {
   //const Exam5_3 = ({isLogin}) => {};
   // 조건문 사용!

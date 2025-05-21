@@ -10,6 +10,8 @@ const Exam3 = () => {
   // 자식 컴포넌트 (child1에 부모의 상태인 name 값을
   //  username이라는 key에 세팅하여  props를 통해 전달)
   return <Child1 username={name} age="10" />;
+  //return <Child1 username={name} age={10} />;
+  //둘이 같은 표현임
 };
 
 // 자식 컴포넌트
