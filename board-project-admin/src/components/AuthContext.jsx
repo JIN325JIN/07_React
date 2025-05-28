@@ -86,12 +86,34 @@ export const AuthProvider = ({ children }) => {
     // 자식 (하위) 컴포넌트에게 전달할 데이터를 하나로 묶기
   };
 
+  // 로그아웃 처리 함수
+  const handleLogout = async () => {
+    // 로컬스토리지에 사용자가 없어야함(클라이언트)
+    // 서버쪽에도 요청 가야함.(세션)
+
+    // 클라이언트와 서버 둘다 비워주기
+
+    // 비동기 처리
+    try {
+      const resp = await axios.get("http://localhost/admin/logout");
+      console.log(resp);
+
+      if (resp.status === 200) {
+        localStorage.removeItem("userData");
+        setUser(null);
+      }
+    } catch (error) {
+      console.log("로그아웃 중 문제 발생 : ", error);
+    }
+  };
+
+  // 자식 ( 하위) 컴포넌트에게 전달할 데이터를 하나로 묶기
   const globalState = {
     user,
     changeInputEmail,
     changeInputPw,
     handleLogin,
-    // 핸들 로그아웃
+    handleLogout,
   };
   return (
     <AuthContext.Provider value={globalState}>{children}</AuthContext.Provider>
